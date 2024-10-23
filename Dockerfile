@@ -50,3 +50,5 @@ RUN mamba env update -q -f /tmp/environment.yml && \
     rm -rf ${HOME}/.renku/venv
 
 COPY --from=builder ${HOME}/.renku/venv ${HOME}/.renku/venv
+
+RUN code-server --install-extension ms-python.python --install-extension ms-toolsai.jupyter
