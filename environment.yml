@@ -8,7 +8,6 @@ name: "base"
 # these restrictions completely.
 channels:
   - conda-forge
-# dependencies:
-# - add packages here
-# - one per line
+dependencies:
+  - code-server
 prefix: "/opt/conda"
