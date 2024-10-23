@@ -9,3 +9,4 @@ pytorch-lightning
 matplotlib
 seaborn
 tqdm
+jupyter-vscode-proxy
