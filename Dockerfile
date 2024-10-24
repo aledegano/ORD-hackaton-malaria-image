@@ -8,9 +8,6 @@ FROM renku/renkulab-py:3.10-0.24.0 as builder
 # visit https://pypi.org/project/renku/#history.
 ARG RENKU_VERSION=2.9.2
 
-# to run streamlit
-COPY jupyter_notebook_config.py ${HOME}/.jupyter/
-
 # Install renku from pypi or from github if a dev version
 RUN if [ -n "$RENKU_VERSION" ] ; then \
         source .renku/venv/bin/activate ; \
@@ -53,5 +50,8 @@ RUN mamba env update -q -f /tmp/environment.yml && \
     rm -rf ${HOME}/.renku/venv
 
 COPY --from=builder ${HOME}/.renku/venv ${HOME}/.renku/venv
+
+# to run streamlit
+COPY jupyter_notebook_config.py ${HOME}/.jupyter/
 
 RUN code-server --install-extension ms-python.python --install-extension ms-toolsai.jupyter
