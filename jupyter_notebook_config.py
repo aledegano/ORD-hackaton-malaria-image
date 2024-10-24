@@ -3,7 +3,7 @@ c.ServerProxy.servers = {
         'command': [
             'streamlit',
             'run',
-            'hello',
+            '../work/hackathon_SDSC_2024/code/streamlit_app.py',
             '--server.port', '8501',
             '--browser.serverAddress', '0.0.0.0',
         ],
