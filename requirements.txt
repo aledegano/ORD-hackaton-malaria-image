@@ -10,3 +10,4 @@ matplotlib
 seaborn
 tqdm
 jupyter-vscode-proxy
+streamlit
